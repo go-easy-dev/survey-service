@@ -28,7 +28,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: application-jar
-          path: build/libs/user-service-0.0.1-SNAPSHOT.jar
+          path: build/libs/survey-service-0.0.1-SNAPSHOT.jar
           if-no-files-found: error
 
   build-docker-image:
@@ -40,7 +40,7 @@ jobs:
       SA_BUILDER_PRIVATE_KEY: ${{ secrets.SA_PRIVATE_KEY }}
       INFRA_SCRIPTS_PAT: ${{ secrets.INFRA_SCRIPTS_PAT }}
     with:
-      build_name: user-service
+      build_name: survey-service
       artifact_name: application-jar
       artifact_path: build/libs
 
