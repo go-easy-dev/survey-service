@@ -46,7 +46,7 @@ public class UserSurveyServiceTest {
                 .testId("TEST_ID")
                 .testResults(Map.of("Question_ID",
                         List.of(AnswerEntity.builder()
-                                .answer("yes")
+                                .answerCode("yes")
                                 .build()))
                 )
                 .build();
@@ -89,11 +89,11 @@ public class UserSurveyServiceTest {
                 .testId("TEST_ID")
                 .testResults(Map.of("Question_1",
                         List.of(AnswerEntity.builder()
-                                .answer("yes")
+                                .answerCode("yes")
                                 .build()),
                         "Question_2",
                         List.of(AnswerEntity.builder()
-                                .answer("no")
+                                .answerCode("no")
                                 .build()
                         )
                 ))

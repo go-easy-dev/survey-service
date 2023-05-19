@@ -10,5 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class AnswerEntity {
-    private String answer;
+    private String answerCode;
+    private String description;
 }

@@ -7,82 +7,101 @@
     "questions": [
       {
         "name": "Утром вы просыпаетесь полными сил и в хорошем настроении?",
-        "id": "health_start_question_1",
+        "id": "health_welcome_question_1",
+        "linkedSphere": "health",
         "possibleAnswers": [
           {
-            "answer": "Да"
+            "answerCode": "yes_answer",
+            "description": "Да"
           },
           {
-            "answer": "Нет"
+            "answerCode": "no_answer",
+            "description": "Нет"
           },
           {
-            "answer": "Иногда"
+            "answerCode": "sometimes",
+            "description": "Иногда"
           }
         ]
       },
       {
         "name": "Ваше состояние здоровья требует внимания?",
-        "id": "health_start_question_2",
+        "id": "health_welcome_question_2",
+        "linkedSphere": "health",
         "possibleAnswers": [
           {
-            "answer": "Да"
+            "answerCode": "yes_answer",
+            "description": "Да"
           },
           {
-            "answer": "Нет"
+            "answerCode": "no_answer",
+            "description": "Нет"
           },
           {
-            "answer": "Не знаю"
+            "answerCode": "sometimes",
+            "description": "Не знаю"
           }
         ]
       },
       {
         "name": "У вас часто случаются перепады настроения?",
-        "id": "health_start_question_3",
+        "id": "health_welcome_question_3",
         "possibleAnswers": [
           {
-            "answer": "Да"
+            "answerCode": "yes_answer",
+            "description": "Да"
           },
           {
-            "answer": "Нет"
+            "answerCode": "no_answer",
+            "description": "Нет"
           },
           {
-            "answer": "Иногда"
+            "answerCode": "sometimes",
+            "description": "Иногда"
           }
         ]
       },
       {
         "name": "В вашей жизни больше приятных моментов?",
-        "id": "happiness_start_question_1",
+        "id": "happiness_welcome_question_1",
         "possibleAnswers": [
           {
-            "answer": "Да"
+            "answerCode": "yes_answer",
+            "description": "Да"
           },
           {
-            "answer": "Нет"
+            "answerCode": "no_answer",
+            "description": "Нет"
           },
           {
-            "answer": "Чаще да"
+            "answerCode": "more_often",
+            "description": "Чаще да"
           },
           {
-            "answer": "Чаще нет"
+            "answerCode": "less_often",
+            "description": "Чаще нет"
           }
         ]
       },
       {
         "name": "Вы думаете о будущем в позитивном ключе?",
-        "id": "happiness_start_question_2",
+        "id": "happiness_welcome_question_2",
         "possibleAnswers": [
           {
-            "answer": "Да"
+            "answerCode": "yes_answer",
+            "description": "Да"
           },
           {
-            "answer": "Нет"
+            "answerCode": "no_answer",
+            "description": "Нет"
           },
           {
-            "answer": "Чаще да"
+            "answerCode": "more_often",
+            "description": "Чаще да"
           },
           {
-            "answer": "Чаще нет"
+            "answerCode": "less_often",
+            "description": "Чаще нет"
           }
         ]
       },
@@ -91,235 +110,282 @@
         "id": "happiness_question_3",
         "possibleAnswers": [
           {
-            "answer": "Да, легко"
+            "answerCode": "yes_answer",
+            "description": "Да, легко"
           },
           {
-            "answer": "Да, но пришлось подумать"
+            "answerCode": "sometimes",
+            "description": "Да, но пришлось подумать"
           },
           {
-            "answer": "Нет"
+            "answerCode": "no_answer",
+            "description": "Нет"
           }
         ]
       },
       {
         "name": "Не в деньгах счастье",
-        "id": "money_start_question_1",
+        "id": "money_welcome_question_1",
         "possibleAnswers": [
           {
-            "answer": "Да"
+            "answerCode": "yes_answer",
+            "description": "Да"
           },
           {
-            "answer": "Нет"
+            "answerCode": "no_answer",
+            "description": "Нет"
           },
           {
-            "answer": "Не знаю"
+            "answerCode": "sometimes",
+            "description": "Не знаю"
           }
         ]
       },
       {
         "name": "С какой фигурой у вас ассоциируются деньги?",
-        "id": "money_start_question_2",
+        "id": "money_welcome_question_2",
         "possibleAnswers": [
           {
-            "answer": "Круг"
+            "answerCode": "circle",
+            "description": "Круг"
           },
           {
-            "answer": "Треугольник"
+            "answerCode": "triangle",
+            "description": "Треугольник"
           },
           {
-            "answer": "Квадрат"
+            "answerCode": "square",
+            "description": "Квадрат"
           }
         ]
       },
       {
         "name": "Как к вам приходят деньги?",
-        "id": "money_start_question_3",
+        "id": "money_welcome_question_3",
         "possibleAnswers": [
           {
-            "answer": "Легко"
+            "answerCode": "yes_answer",
+            "description": "Легко"
           },
           {
-            "answer": "Трудно"
+            "answerCode": "no_answer",
+            "description": "Трудно"
           },
           {
-            "answer": "Сложно сказать"
+            "answerCode": "sometimes",
+            "description": "Сложно сказать"
           }
         ]
       },
       {
         "name": "Вы занимаетесь любимым делом?",
-        "id": "selfrealization_start_question_1",
+        "id": "selfrealization_welcome_question_1",
         "possibleAnswers": [
           {
-            "answer": "Да"
+            "answerCode": "yes_answer",
+            "description": "Да"
           },
           {
-            "answer": "Нет"
+            "answerCode": "no_answer",
+            "description": "Нет"
           },
           {
-            "answer": "Иногда"
+            "answerCode": "sometimes",
+            "description": "Иногда"
           }
         ]
       },
       {
         "name": "Вы знаете, чем вы хотите заниматься?",
-        "id": "selfrealization_start_question_2",
+        "id": "selfrealization_welcome_question_2",
         "possibleAnswers": [
           {
-            "answer": "Да"
+            "answerCode": "yes_answer",
+            "description": "Да"
           },
           {
-            "answer": "Нет"
+            "answerCode": "no_answer",
+            "description": "Нет"
           },
           {
-            "answer": "Сомневаюсь"
+            "answerCode": "sometimes",
+            "description": "Сомневаюсь"
           }
         ]
       },
       {
         "name": "Вы чувствуете свою самоценность?",
-        "id": "selfrealization_start_question_3",
+        "id": "selfrealization_welcome_question_3",
         "possibleAnswers": [
           {
-            "answer": "Да"
+            "answerCode": "yes_answer",
+            "description": "Да"
           },
           {
-            "answer": "Нет"
+            "answerCode": "no_answer",
+            "description": "Нет"
           },
           {
-            "answer": "Иногда"
+            "answerCode": "sometimes",
+            "description": "Иногда"
           }
         ]
       },
       {
         "name": "У вас есть люди, которым вы можете абсолютно доверять?",
-        "id": "friends_start_question_1",
+        "id": "friends_welcome_question_1",
         "possibleAnswers": [
           {
-            "answer": "Да"
+            "answerCode": "yes_answer",
+            "description": "Да"
           },
           {
-            "answer": "Нет"
+            "answerCode": "no_answer",
+            "description": "Нет"
           },
           {
-            "answer": "Не знаю"
+            "answerCode": "sometimes",
+            "description": "Не знаю"
           }
         ]
       },
       {
         "name": "Вы часто общаетесь с друзьями?",
-        "id": "friends_start_question_2",
+        "id": "friends_welcome_question_2",
         "possibleAnswers": [
           {
-            "answer": "Да"
+            "answerCode": "yes_answer",
+            "description": "Да"
           },
           {
-            "answer": "Нет"
+            "answerCode": "no_answer",
+            "description": "Нет"
           },
           {
-            "answer": "Редко"
+            "answerCode": "sometimes",
+            "description": "Редко"
           }
         ]
       },
       {
         "name": "Как вы отреагируете на просьбу друга занять ему денег?",
-        "id": "friends_start_question_3",
+        "id": "friends_welcome_question_3",
         "possibleAnswers": [
           {
-            "answer": "Просто дам денег"
+            "answerCode": "yes_answer",
+            "description": "Просто дам денег"
           },
           {
-            "answer": "Займу денег"
+            "answerCode": "sometimes",
+            "description": "Займу денег"
           },
           {
-            "answer": "Скажу, что я не занимаю денег"
+            "answerCode": "no_answer",
+            "description": "Скажу, что я не занимаю денег"
           }
         ]
       },
       {
         "name": "Ваши родители часто вас хвалили?",
-        "id": "parents_start_question_1",
+        "id": "parents_welcome_question_1",
         "possibleAnswers": [
           {
-            "answer": "Да"
+            "answerCode": "yes_answer",
+            "description": "Да"
           },
           {
-            "answer": "Нет"
+            "answerCode": "no_answer",
+            "description": "Нет"
           },
           {
-            "answer": "Иногда"
+            "answerCode": "sometimes",
+            "description": "Иногда"
           }
         ]
       },
       {
         "name": "Вы чувствуете благодарность своим родителям?",
-        "id": "parents_start_question_2",
+        "id": "parents_welcome_question_2",
         "possibleAnswers": [
           {
-            "answer": "Да"
+            "answerCode": "yes_answer",
+            "description": "Да"
           },
           {
-            "answer": "Нет"
+            "answerCode": "no_answer",
+            "description": "Нет"
           },
           {
-            "answer": "Иногда"
+            "answerCode": "sometimes",
+            "description": "Иногда"
           }
         ]
       },
       {
         "name": "Вы знаете историю своего рода?",
-        "id": "parents_start_question_3",
+        "id": "parents_welcome_question_3",
         "possibleAnswers": [
           {
-            "answer": "Да"
+            "answerCode": "yes_answer",
+            "description": "Да"
           },
           {
-            "answer": "Нет"
+            "answerCode": "no_answer",
+            "description": "Нет"
           },
           {
-            "answer": "Прабабушек и прапрабабушек знаю"
+            "answerCode": "sometimes",
+            "description": "Прабабушек и прапрабабушек знаю"
           }
         ]
       },
       {
         "name": "Пару я себе представляю, как 1+1 = 1",
-        "id": "relationship_start_question_1",
+        "id": "relationship_welcome_question_1",
         "possibleAnswers": [
           {
-            "answer": "Да"
+            "answerCode": "yes_answer",
+            "description": "Да"
           },
           {
-            "answer": "Нет"
+            "answerCode": "no_answer",
+            "description": "Нет"
           }
         ]
       },
       {
         "name": "Больше всего мне нравится начало отношений",
-        "id": "relationship_start_question_2",
+        "id": "relationship_welcome_question_2",
         "possibleAnswers": [
           {
-            "answer": "Да"
+            "answerCode": "yes_answer",
+            "description": "Да"
           },
           {
-            "answer": "Нет, мне просто хорошо в отношениях"
+            "answerCode": "no_answer",
+            "description": "Нет, мне просто хорошо в отношениях"
           },
           {
-            "answer": "Не знаю"
+            "answerCode": "sometimes",
+            "description": "Не знаю"
           }
         ]
       },
       {
         "name": "В любых отношениях иногда бывает скучно",
-        "id": "relationship_start_question_3",
+        "id": "relationship_welcome_question_3",
         "possibleAnswers": [
           {
-            "answer": "Да"
+            "answerCode": "yes_answer",
+            "description": "Да"
           },
           {
-            "answer": "Нет"
+            "answerCode": "no_answer",
+            "description": "Нет"
           },
           {
-            "answer": "Иногда"
+            "answerCode": "sometimes",
+            "description": "Иногда"
           }
         ]
       }
@@ -334,45 +400,55 @@
     "questions": [
       {
         "name": "Мы наделяем деньги очень большим значением. Они становятся для нас и свободой, и безопасностью. Так ли это на самом деле? Закройте глаза и посмотрите на деньги, что вы чувствуете? Про что для вас деньги? Как вы взаимодействуете с ними? Представьте, что вокруг вас много денег, они все доступны вам.",
-        "id": "money_test_question_1"
+        "id": "money_sphere_question_1"
       },
       {
         "name": "Пришло время стать деньгами и посмотреть на вас. Представьте себя большой суммой денег и посмотрите на себя со стороны. Каким человеком видят вас деньги? Что вы чувствуете по отношению к себе?",
-        "id": "money_test_question_2"
+        "id": "money_sphere_question_2"
       },
       {
         "name": "А теперь встаньте между вами и деньгами, что вы чувствуете в вашей связи? Какая она? Что поможет ее укреплению? Что поможет ее расширению? Будьте честны с собой.",
-        "id": "money_test_question_3",
+        "id": "money_sphere_question_3",
         "possibleAnswers": [
           {
-            "answer": "Всего достаточно"
+            "answerCode": "all_enough_answer",
+            "description": "Всего достаточно"
           },
           {
-            "answer": "Смелости"
+            "answerCode": "courage_answer",
+            "description": "Смелости"
           },
           {
-            "answer": "Честности"
+            "answerCode": "honesty_answer",
+            "description": "Честности"
           },
           {
-            "answer": "Открытости"
+            "answerCode": "openness_answer",
+            "description": "Открытости"
           },
           {
-            "answer": "Уверенности"
+            "answerCode": "confidence_answer",
+            "description": "Уверенности"
           },
           {
-            "answer": "Ясности"
+            "answerCode": "clearness_answer",
+            "description": "Ясности"
           },
           {
-            "answer": "Ответственности"
+            "answerCode": "responsibility_answer",
+            "description": "Ответственности"
           },
           {
-            "answer": "Опоры"
+            "answerCode": "support_answer",
+            "description": "Опоры"
           },
           {
-            "answer": "Фокуса внимания"
+            "answerCode": "focus_answer",
+            "description": "Фокуса внимания"
           },
           {
-            "answer": "Достаточности"
+            "answerCode": "adequacy_answer",
+            "description": "Достаточности"
           }
         ]
       }
@@ -387,42 +463,51 @@
     "questions": [
       {
         "name": "Наш фундамент. О чем наше желание, когда мы чувствуем нездоровье? Хотим ли мы в этот момент денег или встретить своего партнера? На самом деле, мы хотим здоровья. Будьте в этой сфере максимально честны с собой. Это сфера больше всех остальных влияет на баланс жизни, ведь мы живем в материальном мире и представлены в нем физическим телом Посмотрите на свое здоровье. Вы полностью довольны, как вы ощущаете себя? Тело в гармонии с головой, а голова слышит потребности тела?",
-        "id": "health_test_question_1"
+        "id": "health_sphere_question_1"
       },
       {
         "name": "Посмотрите на себя глазами вашего здоровья. Все ли условия созданы, чтобы служить вам? Чувствует ли здоровье свою значимость и важность? Легко ли ему поддерживать вас и сопровождать на вашем жизненном пути?",
-        "id": "health_test_question_2"
+        "id": "health_sphere_question_2"
       },
       {
         "name": "А теперь почувствуйте связь между вами. Есть ли там сбой? Если ли дисбаланс?",
-        "id": "money_test_question_3",
+        "id": "money_sphere_question_3",
         "possibleAnswers": [
           {
-            "answer": "Всего достаточно"
+            "answerCode": "all_enough_answer",
+            "description": "Всего достаточно"
           },
           {
-            "answer": "Фокус внимания"
+            "answerCode": "focus_answer",
+            "description": "Фокус внимания"
           },
           {
-            "answer": "Дисциплина"
+            "answerCode": "discipline_answer",
+            "description": "Дисциплина"
           },
           {
-            "answer": "Удовольствие"
+            "answerCode": "pleasure_answer",
+            "description": "Удовольствие"
           },
           {
-            "answer": "Баланс"
+            "answerCode": "balance_answer",
+            "description": "Баланс"
           },
           {
-            "answer": "Отдых"
+            "answerCode": "rest_answer",
+            "description": "Отдых"
           },
           {
-            "answer": "Активность"
+            "answerCode": "activity",
+            "description": "Активность"
           },
           {
-            "answer": "Честность"
+            "answerCode": "honesty_answer",
+            "description": "Честность"
           },
           {
-            "answer": "Признание"
+            "answerCode": "recognition_answer",
+            "description": "Признание"
           }
         ]
       }
@@ -437,7 +522,7 @@
     "questions": [
       {
         "name": "Кто я и что я могу делать в этом мире? Что нас зажигает и чем мы готовы делиться со всеми? Соответствует ли то, что я делаю сейчас тому, что я действительно хочу? Давайте посмотрим. Посмотрите на свою реализацию. Соответствует ли она зову души, вызывает ли мурашки и трепет восторга, приносит ли достаточно денег и удовольствия?",
-        "id": "selfrealization_test_question_1"
+        "id": "selfrealization_sphere_question_1"
       },
       {
         "name": "А теперь мысленно перейдите в поле реализации и посмотрите на себя ее глазами. Вы делаете все, на что способны? Что чувствует реализация по отношению к вам?",
@@ -445,31 +530,39 @@
       },
       {
         "name": "Займите место связи между вами и реализацией. Что будет наполнять ее? Что позволит реализовываться на все 100%, наслаждаясь результатом своей деятельности? Что вы хотите добавить в вашу связь?",
-        "id": "money_test_question_3",
+        "id": "money_sphere_question_3",
         "possibleAnswers": [
           {
-            "answer": "Всего достаточно"
+            "answerCode": "all_enough_answer",
+            "description": "Всего достаточно"
           },
           {
-            "answer": "Уверенность"
+            "answerCode": "confidence_answer",
+            "description": "Уверенность"
           },
           {
-            "answer": "Достаточность"
+            "answerCode": "adequacy_answer",
+            "description": "Достаточность"
           },
           {
-            "answer": "Смелость"
+            "answerCode": "courage_answer",
+            "description": "Смелость"
           },
           {
-            "answer": "Принятие"
+            "answerCode": "acceptance_answer",
+            "description": "Принятие"
           },
           {
-            "answer": "Радость"
+            "answerCode": "joy_answer",
+            "description": "Радость"
           },
           {
-            "answer": "Ответственность"
+            "answerCode": "responsibility_answer",
+            "description": "Ответственность"
           },
           {
-            "answer": "Открытость"
+            "answerCode": "openness_answer",
+            "description": "Открытость"
           }
         ]
       }
@@ -484,7 +577,7 @@
     "questions": [
       {
         "name": "Наш фундамент. О чем наше желание, когда мы чувствуем нездоровье? Хотим ли мы в этот момент денег или встретить своего партнера? На самом деле, мы хотим здоровья. Будьте в этой сфере максимально честны с собой. Это сфера больше всех остальных влияет на баланс жизни, ведь мы живем в материальном мире и представлены в нем физическим телом Посмотрите на свое здоровье. Вы полностью довольны, как вы ощущаете себя? Тело в гармонии с головой, а голова слышит потребности тела?",
-        "id": "health_test_question_1"
+        "id": "health_sphere_question_1"
       },
       {
         "name": "Посмотрите на себя глазами вашего здоровья. Все ли условия созданы, чтобы служить вам? Чувствует ли здоровье свою значимость и важность? Легко ли ему поддерживать вас и сопровождать на вашем жизненном пути?",
@@ -495,31 +588,40 @@
         "id": "money_test_question_3",
         "possibleAnswers": [
           {
-            "answer": "Всего достаточно"
+            "answerCode":,
+            "description": "Всего достаточно"
           },
           {
-            "answer": "Фокус внимания"
+            "answerCode": "focus_answer",
+            "description": "Фокус внимания"
           },
           {
-            "answer": "Дисциплина"
+            "answerCode": "discipline_answer",
+            "description": "Дисциплина"
           },
           {
-            "answer": "Удовольствие"
+            "answerCode": "joy_answer",
+            "description": "Удовольствие"
           },
           {
-            "answer": "Баланс"
+            "answerCode": "balance_answer",
+            "description": "Баланс"
           },
           {
-            "answer": "Отдых"
+            "answerCode": "rest_answer",
+            "description": "Отдых"
           },
           {
-            "answer": "Активность"
+            "answerCode": "activity_answer",
+            "description": "Активность"
           },
           {
-            "answer": "Честность"
+            "answerCode": "honesty_answer",
+            "description": "Честность"
           },
           {
-            "answer": "Признание"
+            "answerCode": "recognition_answer",
+            "description": "Признание"
           }
         ]
       }

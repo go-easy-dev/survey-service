@@ -27,7 +27,7 @@ class SurveyRepositoryTest {
                 .question(QuestionEntity.builder()
                         .name("Name")
                         .possibleAnswers(List.of(AnswerEntity.builder()
-                                .answer("Answer")
+                                .answerCode("Answer")
                                 .build()))
                         .build())
                 .build());
