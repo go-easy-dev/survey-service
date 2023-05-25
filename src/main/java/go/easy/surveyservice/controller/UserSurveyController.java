@@ -6,6 +6,7 @@ import go.easy.surveyservice.dto.userresult.bind.UserBindSurveyRequest;
 import go.easy.surveyservice.dto.userresult.bind.UserBindSurveyResponse;
 import go.easy.surveyservice.dto.userresult.progress.UserProgressResponse;
 import go.easy.surveyservice.service.UserSurveyService;
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -23,17 +24,20 @@ public class UserSurveyController {
 
     private final UserSurveyService service;
 
+    @Operation(summary = "Связывание ответов на тест с юзером")
     @PostMapping("/bind")
     ResponseEntity<UserBindSurveyResponse> bindSurveyToUser(@RequestBody @Valid UserBindSurveyRequest request) {
 
         return ResponseEntity.ok(service.bindSurveyToUser(request));
     }
 
+    @Operation(summary = "Расчет сферы по результатом теста")
     @PostMapping("/score")
     ResponseEntity<UserScoreSurveyResponse> scoreUserSurvey(@RequestBody @Valid UserScoringRequest userScoringRequest) {
         return ResponseEntity.ok(service.scoreSurvey(userScoringRequest));
     }
 
+    @Operation(summary = "Получение результатов теста")
     @GetMapping("/results/{userId}")
     ResponseEntity<UserProgressResponse> getUserProgress(@PathVariable String userId) {
         return ResponseEntity.ok(service.getUserProgress(userId));

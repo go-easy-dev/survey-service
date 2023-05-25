@@ -99,7 +99,6 @@ public class UserSurveyServiceTest {
                 ))
                 .build()));
         Mockito.when(surveyRepository.findById("TEST_ID")).thenReturn(Optional.of(SurveyEntity.builder()
-                .sphere("sphere")
                 .questions(List.of(
                                 QuestionEntity.builder().build(),
                                 QuestionEntity.builder().build(),

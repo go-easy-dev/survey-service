@@ -4,11 +4,11 @@
     "version": 1,
     "multipleChoice": false,
     "opened": true,
+    "sphere": "general",
     "questions": [
       {
         "name": "Утром вы просыпаетесь полными сил и в хорошем настроении?",
         "id": "health_welcome_question_1",
-        "linkedSphere": "health",
         "possibleAnswers": [
           {
             "answerCode": "yes_answer",
@@ -27,7 +27,6 @@
       {
         "name": "Ваше состояние здоровья требует внимания?",
         "id": "health_welcome_question_2",
-        "linkedSphere": "health",
         "possibleAnswers": [
           {
             "answerCode": "yes_answer",

@@ -64,7 +64,7 @@ public class SurveyServiceTest {
     @Test
     void should_get_surveys_by_sphere() {
         // given:
-        Mockito.when(surveyRepository.findAllBySphere("sphere")).thenReturn(Collections.emptyList());
+        Mockito.when(surveyRepository.findAllByLinkedSphere("sphere")).thenReturn(Collections.emptyList());
 
         // then:
         Assertions.assertThatThrownBy(() -> surveyService.getSurveysBySphere("sphere"))
