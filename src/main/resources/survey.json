@@ -588,7 +588,7 @@
         "id": "money_test_question_3",
         "possibleAnswers": [
           {
-            "answerCode":,
+            "answerCode": "all_enough_answer",
             "description": "Всего достаточно"
           },
           {
