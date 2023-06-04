@@ -26,7 +26,7 @@ public class SurveyController {
     }
 
     @Operation(summary = "Получение опросов по сфере")
-    @GetMapping("sphere/{sphere}")
+    @GetMapping("/sphere/{sphere}")
     ResponseEntity<List<SurveyEntity>> getSurveysBySphere(@PathVariable String sphere) {
         return ResponseEntity.ok(service.getSurveysBySphere(sphere));
     }
