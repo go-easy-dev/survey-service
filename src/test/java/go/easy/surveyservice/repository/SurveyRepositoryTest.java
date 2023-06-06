@@ -48,7 +48,7 @@ class SurveyRepositoryTest {
     @Test
     void should_find_by_sphere() {
         // when
-        var actual = surveyRepository.findAllByLinkedSphere("SPHERE");
+        var actual = surveyRepository.findAllBySphere("SPHERE");
 
         // then
         Assertions.assertThat(actual)
