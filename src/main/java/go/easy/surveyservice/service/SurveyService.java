@@ -8,9 +8,9 @@ import go.easy.surveyservice.repository.SurveyRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ResourceUtils;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -69,7 +69,7 @@ public class SurveyService {
     @SneakyThrows
     private List<SurveyEntity> parseFile() {
         log.info("parsing file with surveys");
-        var file = new ClassPathResource("survey.json").getFile();
+        var file = ResourceUtils.getFile("survey.json");
         return objectMapper.readValue(file,
                 new TypeReference<>() {
                 });
