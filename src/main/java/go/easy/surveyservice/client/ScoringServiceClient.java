@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(value = "scoring-service", url = "http://scoring-service/api/v1/scoring")
+@FeignClient(value = "scoring-service", url = "http://scoring-service:8080/api/v1/scoring")
 public interface ScoringServiceClient {
 
     @PostMapping(value = "/survey/score")
