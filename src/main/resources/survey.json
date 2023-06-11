@@ -1,5 +1,196 @@
 [
   {
+    "id": "welcome_estimation_test",
+    "version": 1,
+    "multipleChoice": false,
+    "opened": true,
+    "sphere": "general",
+    "questions": [
+      {
+        "name": "Оцените свое здоровье",
+        "id": "health_welcome_estimation_question",
+        "possibleAnswers": [
+          {
+            "answerCode": "one",
+            "description": "1"
+          },
+          {
+            "answerCode": "two",
+            "description": "2"
+          },
+          {
+            "answerCode": "three",
+            "description": "3"
+          },
+          {
+            "answerCode": "four",
+            "description": "4"
+          },
+          {
+            "answerCode": "five",
+            "description": "5"
+          }
+        ]
+      },
+      {
+        "name": "Вы чувствуете радость от жизни?",
+        "id": "happiness_welcome_estimation_question",
+        "possibleAnswers": [
+          {
+            "answerCode": "one",
+            "description": "1"
+          },
+          {
+            "answerCode": "two",
+            "description": "2"
+          },
+          {
+            "answerCode": "three",
+            "description": "3"
+          },
+          {
+            "answerCode": "four",
+            "description": "4"
+          },
+          {
+            "answerCode": "five",
+            "description": "5"
+          }
+        ]
+      },
+      {
+        "name": "Вы довольны своей реализацией?",
+        "id": "selfrealization_welcome_estimation_question",
+        "possibleAnswers": [
+          {
+            "answerCode": "one",
+            "description": "1"
+          },
+          {
+            "answerCode": "two",
+            "description": "2"
+          },
+          {
+            "answerCode": "three",
+            "description": "3"
+          },
+          {
+            "answerCode": "four",
+            "description": "4"
+          },
+          {
+            "answerCode": "five",
+            "description": "5"
+          }
+        ]
+      },
+      {
+        "name": "Вы довольны вашим финансовым положением?",
+        "id": "money_welcome_estimation_question",
+        "possibleAnswers": [
+          {
+            "answerCode": "one",
+            "description": "1"
+          },
+          {
+            "answerCode": "two",
+            "description": "2"
+          },
+          {
+            "answerCode": "three",
+            "description": "3"
+          },
+          {
+            "answerCode": "four",
+            "description": "4"
+          },
+          {
+            "answerCode": "five",
+            "description": "5"
+          }
+        ]
+      },
+      {
+        "name": "Вы удовлетворены своими отношениями?",
+        "id": "relationship_welcome_estimation_question",
+        "possibleAnswers": [
+          {
+            "answerCode": "one",
+            "description": "1"
+          },
+          {
+            "answerCode": "two",
+            "description": "2"
+          },
+          {
+            "answerCode": "three",
+            "description": "3"
+          },
+          {
+            "answerCode": "four",
+            "description": "4"
+          },
+          {
+            "answerCode": "five",
+            "description": "5"
+          }
+        ]
+      },
+      {
+        "name": "У вас достаточно друзей, и вы удовлетворены вашей дружбой?",
+        "id": "friends_welcome_estimation_question",
+        "possibleAnswers": [
+          {
+            "answerCode": "one",
+            "description": "1"
+          },
+          {
+            "answerCode": "two",
+            "description": "2"
+          },
+          {
+            "answerCode": "three",
+            "description": "3"
+          },
+          {
+            "answerCode": "four",
+            "description": "4"
+          },
+          {
+            "answerCode": "five",
+            "description": "5"
+          }
+        ]
+      },
+      {
+        "name": "У вас крепкие отношения с родителями",
+        "id": "family_welcome_estimation_question",
+        "possibleAnswers": [
+          {
+            "answerCode": "one",
+            "description": "1"
+          },
+          {
+            "answerCode": "two",
+            "description": "2"
+          },
+          {
+            "answerCode": "three",
+            "description": "3"
+          },
+          {
+            "answerCode": "four",
+            "description": "4"
+          },
+          {
+            "answerCode": "five",
+            "description": "5"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "welcome_test",
     "version": 1,
     "multipleChoice": false,
