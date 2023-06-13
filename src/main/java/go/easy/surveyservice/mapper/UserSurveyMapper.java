@@ -12,6 +12,7 @@ public interface UserSurveyMapper {
     UserSurveyMapper INSTANCE = Mappers.getMapper(UserSurveyMapper.class);
 
     @Mapping(target = "id", expression = "java(java.util.UUID.randomUUID().toString())")
+    @Mapping(target = "createdAt", expression = "java(java.time.LocalDateTime.now())")
     UserSurveyResult map(UserBindSurveyRequest request);
 
 }

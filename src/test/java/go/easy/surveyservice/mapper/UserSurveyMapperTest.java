@@ -21,7 +21,7 @@ class UserSurveyMapperTest {
         // then
         Assertions.assertThat(actual)
                 .usingRecursiveComparison()
-                .ignoringFields("id")
+                .ignoringFields("id", "createdAt")
                 .isEqualTo(given);
     }
 }

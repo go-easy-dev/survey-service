@@ -9,4 +9,6 @@ public interface UserSurveyRepository extends MongoRepository<UserSurveyResult, 
 
     List<UserSurveyResult> findAllByUserId(String userId);
 
+    List<UserSurveyResult> findAllByUserIdAndTestId(String userId, String testId);
+
 }

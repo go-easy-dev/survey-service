@@ -4,6 +4,7 @@ import go.easy.surveyservice.client.ScoringServiceClient;
 import go.easy.surveyservice.dto.scoring.ScoringRequest;
 import go.easy.surveyservice.dto.scoring.UserScoreSurveyResponse;
 import go.easy.surveyservice.dto.scoring.UserScoringRequest;
+import go.easy.surveyservice.dto.survey.SurveyEntity;
 import go.easy.surveyservice.dto.userresult.bind.UserBindSurveyRequest;
 import go.easy.surveyservice.dto.userresult.bind.UserBindSurveyResponse;
 import go.easy.surveyservice.dto.userresult.bind.UserSurveyResult;
@@ -23,6 +24,8 @@ import org.springframework.util.CollectionUtils;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.Collection;
+import java.util.Comparator;
 import java.util.List;
 
 @Slf4j
@@ -70,6 +73,16 @@ public class UserSurveyService {
                 .userProgresses(processProgress(userSurveys))
                 .sphereCount(userSurveys.size())
                 .build();
+    }
+
+    public UserSurveyResult getUserResults(String sphereId, String userId) {
+        return surveyRepository.findAllBySphere(sphereId)
+                .stream()
+                .map(SurveyEntity::getId)
+                .map(testId -> userSurveyRepository.findAllByUserIdAndTestId(userId, testId))
+                .flatMap(Collection::stream)
+                .max(Comparator.comparing(UserSurveyResult::getCreatedAt))
+                .orElseThrow(() -> new SurveyNotFoundException(HttpStatus.BAD_REQUEST, "can't find user's survey sphere: " + sphereId));
     }
 
     private List<UserProgress> processProgress(List<UserSurveyResult> surveyResults) {

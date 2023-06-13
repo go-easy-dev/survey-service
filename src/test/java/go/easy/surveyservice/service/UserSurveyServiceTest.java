@@ -18,6 +18,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -83,6 +84,20 @@ public class UserSurveyServiceTest {
 
     }
 
+    @Test
+    void should_get_user_results() {
+        // given
+        mockResults();
+
+        // when:
+        var actual = userSurveyService.getUserResults("SPHERE_ID", "USER_ID");
+
+        // then
+        Assertions.assertThat(actual)
+                .isNotNull();
+
+    }
+
     private void mockProgress() {
 
         Mockito.when(userSurveyRepository.findAllByUserId("USER_ID")).thenReturn(List.of(UserSurveyResult.builder()
@@ -107,6 +122,21 @@ public class UserSurveyServiceTest {
                                         QuestionEntity.builder().build()
                                 )
                         )
+                        .build()));
+    }
+
+    private void mockResults() {
+
+        Mockito.when(userSurveyRepository.findAllByUserIdAndTestId("USER_ID", "TEST_ID"))
+                .thenReturn(List.of(UserSurveyResult.builder()
+                        .testId("TEST_ID")
+                        .createdAt(LocalDateTime.now())
+                        .build()));
+
+        Mockito.when(surveyRepository.findAllBySphere("SPHERE_ID")).thenReturn(List.of(
+                SurveyEntity.builder()
+                        .sphere("sphere")
+                        .id("TEST_ID")
                         .build()));
     }
 }

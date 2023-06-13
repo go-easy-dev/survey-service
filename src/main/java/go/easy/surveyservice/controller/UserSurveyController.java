@@ -4,6 +4,7 @@ import go.easy.surveyservice.dto.scoring.UserScoreSurveyResponse;
 import go.easy.surveyservice.dto.scoring.UserScoringRequest;
 import go.easy.surveyservice.dto.userresult.bind.UserBindSurveyRequest;
 import go.easy.surveyservice.dto.userresult.bind.UserBindSurveyResponse;
+import go.easy.surveyservice.dto.userresult.bind.UserSurveyResult;
 import go.easy.surveyservice.dto.userresult.progress.UserProgressResponse;
 import go.easy.surveyservice.service.UserSurveyService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -37,10 +38,16 @@ public class UserSurveyController {
         return ResponseEntity.ok(service.scoreSurvey(userScoringRequest));
     }
 
-    @Operation(summary = "Получение результатов теста")
-    @GetMapping("/results/{userId}")
+    @Operation(summary = "Получение прогресса теста")
+    @GetMapping("/results/progress/{userId}")
     ResponseEntity<UserProgressResponse> getUserProgress(@PathVariable String userId) {
         return ResponseEntity.ok(service.getUserProgress(userId));
+    }
+
+    @Operation(summary = "Получение результатов теста по сфере")
+    @GetMapping("/results/{sphereId}/{userId}")
+    ResponseEntity<UserSurveyResult> getUserResults(@PathVariable String sphereId, @PathVariable String userId) {
+        return ResponseEntity.ok(service.getUserResults(sphereId, userId));
     }
 
 }

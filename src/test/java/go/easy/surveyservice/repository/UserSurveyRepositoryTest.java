@@ -22,6 +22,13 @@ class UserSurveyRepositoryTest {
                 .testId("TEST_ID")
                 .testResults(Map.of())
                 .build());
+
+        userSurveyRepository.save(UserSurveyResult.builder()
+                .id("OTHER_TEST_ID")
+                .userId("USER_ID")
+                .testId("OTHER_TEST_ID")
+                .testResults(Map.of())
+                .build());
     }
 
 
@@ -34,6 +41,17 @@ class UserSurveyRepositoryTest {
         Assertions.assertThat(actual)
                 .isNotEmpty()
                 .filteredOn(elt -> elt.getId().equals("TEST_ID"))
+                .hasSize(1);
+    }
+
+    @Test
+    void should_find_by_user_id_and_test_id() {
+        // when
+        var actual = userSurveyRepository.findAllByUserIdAndTestId("USER_ID", "TEST_ID");
+
+        // then
+        Assertions.assertThat(actual)
+                .isNotEmpty()
                 .hasSize(1);
     }
 }
