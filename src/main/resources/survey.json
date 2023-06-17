@@ -705,7 +705,7 @@
   },
   {
     "id": "selfrealization_test",
-    "version": 2,
+    "version": 3,
     "sphere": "selfrealization",
     "multipleChoice": true,
     "opened": false,
@@ -716,11 +716,11 @@
       },
       {
         "name": "А теперь мысленно перейдите в поле реализации и посмотрите на себя ее глазами. Вы делаете все, на что способны? Что чувствует реализация по отношению к вам?",
-        "id": "health_test_question_2"
+        "id": "selfrealization_sphere_question_2"
       },
       {
         "name": "Займите место связи между вами и реализацией. Что будет наполнять ее? Что позволит реализовываться на все 100%, наслаждаясь результатом своей деятельности? Что вы хотите добавить в вашу связь?",
-        "id": "money_sphere_question_3",
+        "id": "selfrealization_sphere_question_3",
         "possibleAnswers": [
           {
             "answerCode": "all_enough_answer",
@@ -753,65 +753,6 @@
           {
             "answerCode": "openness_answer",
             "description": "Открытость"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "health_test",
-    "version": 2,
-    "sphere": "health",
-    "multipleChoice": true,
-    "opened": false,
-    "questions": [
-      {
-        "name": "Наш фундамент. О чем наше желание, когда мы чувствуем нездоровье? Хотим ли мы в этот момент денег или встретить своего партнера? На самом деле, мы хотим здоровья. Будьте в этой сфере максимально честны с собой. Это сфера больше всех остальных влияет на баланс жизни, ведь мы живем в материальном мире и представлены в нем физическим телом Посмотрите на свое здоровье. Вы полностью довольны, как вы ощущаете себя? Тело в гармонии с головой, а голова слышит потребности тела?",
-        "id": "health_sphere_question_1"
-      },
-      {
-        "name": "Посмотрите на себя глазами вашего здоровья. Все ли условия созданы, чтобы служить вам? Чувствует ли здоровье свою значимость и важность? Легко ли ему поддерживать вас и сопровождать на вашем жизненном пути?",
-        "id": "health_test_question_2"
-      },
-      {
-        "name": "А теперь почувствуйте связь между вами. Есть ли там сбой? Если ли дисбаланс?",
-        "id": "money_test_question_3",
-        "possibleAnswers": [
-          {
-            "answerCode": "all_enough_answer",
-            "description": "Всего достаточно"
-          },
-          {
-            "answerCode": "focus_answer",
-            "description": "Фокус внимания"
-          },
-          {
-            "answerCode": "discipline_answer",
-            "description": "Дисциплина"
-          },
-          {
-            "answerCode": "joy_answer",
-            "description": "Удовольствие"
-          },
-          {
-            "answerCode": "balance_answer",
-            "description": "Баланс"
-          },
-          {
-            "answerCode": "rest_answer",
-            "description": "Отдых"
-          },
-          {
-            "answerCode": "activity_answer",
-            "description": "Активность"
-          },
-          {
-            "answerCode": "honesty_answer",
-            "description": "Честность"
-          },
-          {
-            "answerCode": "recognition_answer",
-            "description": "Признание"
           }
         ]
       }
