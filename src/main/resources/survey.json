@@ -661,7 +661,7 @@
       },
       {
         "name": "А теперь почувствуйте связь между вами. Есть ли там сбой? Если ли дисбаланс?",
-        "id": "money_sphere_question_3",
+        "id": "health_sphere_question_3",
         "possibleAnswers": [
           {
             "answerCode": "all_enough_answer",
