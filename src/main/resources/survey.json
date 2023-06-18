@@ -646,7 +646,7 @@
   },
   {
     "id": "health_test",
-    "version": 2,
+    "version": 3,
     "sphere": "health",
     "multipleChoice": true,
     "opened": false,
