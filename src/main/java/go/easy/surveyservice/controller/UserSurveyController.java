@@ -38,6 +38,12 @@ public class UserSurveyController {
         return ResponseEntity.ok(service.scoreSurvey(userScoringRequest));
     }
 
+    @Operation(summary = "Расчет сферы по результатом теста")
+    @GetMapping("/scoring/{userId}")
+    ResponseEntity<UserScoreSurveyResponse> scoreUserSurvey(@PathVariable String userId) {
+        return ResponseEntity.ok(service.getUserLastScoring(userId));
+    }
+
     @Operation(summary = "Получение прогресса теста")
     @GetMapping("/results/progress/{userId}")
     ResponseEntity<UserProgressResponse> getUserProgress(@PathVariable String userId) {

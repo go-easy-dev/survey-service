@@ -1,12 +1,15 @@
 package go.easy.surveyservice.service;
 
 import go.easy.surveyservice.client.ScoringServiceClient;
+import go.easy.surveyservice.dto.scoring.UserScoreSurveyResponse;
 import go.easy.surveyservice.dto.survey.AnswerEntity;
 import go.easy.surveyservice.dto.survey.QuestionEntity;
 import go.easy.surveyservice.dto.survey.SurveyEntity;
 import go.easy.surveyservice.dto.userresult.bind.UserBindSurveyRequest;
 import go.easy.surveyservice.dto.userresult.bind.UserSurveyResult;
+import go.easy.surveyservice.exception.SurveyNotFoundException;
 import go.easy.surveyservice.mapper.UserSurveyMapper;
+import go.easy.surveyservice.repository.ScoreUserSurveyRepository;
 import go.easy.surveyservice.repository.SurveyRepository;
 import go.easy.surveyservice.repository.UserSurveyRepository;
 import org.assertj.core.api.Assertions;
@@ -19,6 +22,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -35,6 +39,9 @@ public class UserSurveyServiceTest {
 
     @Mock
     SurveyRepository surveyRepository;
+
+    @Mock
+    ScoreUserSurveyRepository scoreUserSurveyRepository;
 
     @InjectMocks
     UserSurveyService userSurveyService;
@@ -61,6 +68,36 @@ public class UserSurveyServiceTest {
         Assertions.assertThat(actual)
                 .hasNoNullFieldsOrProperties()
                 .hasFieldOrPropertyWithValue("userId", "USER_ID");
+    }
+
+    @Test
+    void should_get_users_surveys() {
+        // given:
+        Mockito.when(scoreUserSurveyRepository.findAllByUserId("userId"))
+                .thenReturn(List.of(UserScoreSurveyResponse.builder()
+                        .userId("USER_ID")
+                        .createTime(LocalDateTime.now())
+                        .build()));
+
+        // when:
+        var actual = userSurveyService.getUserLastScoring("userId");
+
+        // then:
+        Assertions.assertThat(actual)
+                .hasFieldOrPropertyWithValue("userId", "USER_ID");
+    }
+
+    @Test
+    void should_throw_users_surveys() {
+        // given:
+        Mockito.when(scoreUserSurveyRepository.findAllByUserId("userId"))
+                .thenReturn(Collections.emptyList());
+
+
+        // then:
+        Assertions.assertThatThrownBy(() -> userSurveyService.getUserLastScoring("userId"))
+                .isInstanceOf(SurveyNotFoundException.class)
+                .hasMessage("404 NOT_FOUND \"can't find user's scoring by user id: userId\"");
     }
 
 

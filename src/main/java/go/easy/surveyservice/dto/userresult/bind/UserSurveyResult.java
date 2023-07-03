@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode(callSuper = true)
 @SuperBuilder(toBuilder = true)
 @NoArgsConstructor
-@Document(collection = "user-survey-result")
+@Document(collection = "userSurveyResult")
 public class UserSurveyResult extends UserBindSurveyRequest {
 
     @Id

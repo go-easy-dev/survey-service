@@ -24,9 +24,12 @@ import org.springframework.util.CollectionUtils;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
+import java.util.UUID;
 
 @Slf4j
 @Service
@@ -59,10 +62,22 @@ public class UserSurveyService {
                 .map(scoringClient::scoreSpheres)
                 .map(score -> UserScoreSurveyResponse.builder()
                         .spheresScoring(score.getSpheresScoring())
+                        .id(UUID.randomUUID().toString())
                         .userId(request.getUserId())
+                        .createTime(LocalDateTime.now())
                         .build())
                 .map(scoreUserSurveyRepository::save)
                 .orElseThrow(() -> new SurveyNotFoundException(HttpStatus.NOT_FOUND, "can't find user's survey by id: " + request.getBindId()));
+
+    }
+
+    public UserScoreSurveyResponse getUserLastScoring(String userId) {
+        log.info("getting last user scoring by id: {}", userId);
+        return scoreUserSurveyRepository.findAllByUserId(userId)
+                .stream()
+                .filter(score -> Objects.nonNull(score.getCreateTime()))
+                .min(Comparator.comparing(UserScoreSurveyResponse::getCreateTime))
+                .orElseThrow(() -> new SurveyNotFoundException(HttpStatus.NOT_FOUND, "can't find user's scoring by user id: " + userId));
 
     }
 
